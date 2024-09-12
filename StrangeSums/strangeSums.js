@@ -9,7 +9,17 @@
 
 
 function strangeSums(arrNums){
-    
+    let count = 0; 
+
+    for(let i = 0; i < arrNums.length; i++){
+        let firstNum = arrNums[i];
+        for(let j = i + 1; j < arrNums.length; j++){
+            let secondNum = arrNums[j];
+            if(firstNum + secondNum === 0) count++;
+        }
+    }
+
+    return count;
 }
 
 
