@@ -12,6 +12,20 @@
 
 
 let uncompress = function(str){
+    let num = '123456789';
+    let numArr= []
+
+    for(let i = 0; i < str.length; i++){    
+        let char = str[i];
+        let nextChar = str[i+1];
+        if(num.includes(nextChar)){ 
+            let iterate = Number(nextChar);
+                for(let j = 0; j < iterate; j++){
+                    numArr.push(char);
+                }           
+        }
+    }
+    return numArr.join("");
     
 }
 
