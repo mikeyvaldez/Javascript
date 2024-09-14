@@ -11,12 +11,14 @@ a strings ends a certain way. Go see if you can find it on MDN!
 
 
 
+let chooseyEndings = function(words, suffix){
+  if(!Array.isArray(words)) return [];
+  let matchingEndings = words.filter(function(element){
+    return element.endsWith(suffix);
+  })
 
-
-
-
-
-
+  return matchingEndings;
+};
 
 
 
