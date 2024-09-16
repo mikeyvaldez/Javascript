@@ -8,12 +8,25 @@ methods.
 */
 
 
-let hasThreeVowels = function(word){
-    
+let countVowels = function(string){
+    let vowels = "aeiouAEIOU";
+    let letters = string.split("");
+    let count = 0;
+
+    letters.forEach((element) => {
+        if(vowels.includes(element)) count++;
+    });
+
+    return count;
 }
 
 
-
+let hasThreeVowels = function(str){
+    if(countVowels(str) > 3){
+        return true;
+    }
+    return false;
+}
 
 
 
