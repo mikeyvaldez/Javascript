@@ -8,6 +8,10 @@ through the callback n times.
 
 let multiMap = function(val, num, cb){
     
+    for(let i = 0; i < num; i++){
+      val = cb(val);
+    }
+    return val;
 }
 
 
