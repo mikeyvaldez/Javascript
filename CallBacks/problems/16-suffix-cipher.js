@@ -5,11 +5,20 @@ function should return a new sentence where words of the original sentence are
 modified according to the callback that corresponds with the suffix that the word
 ends with. If the word does not end in any of the suffix keys, then it should not
 be modified. You can assume that only one suffix of the object will match a word.
-
 *******************************************************************************/
 
-function suffixCipher(sentence, obj){
-    
+function suffixCipher(sentence, cipher){
+    let words = sentence.split(" ");
+    let newSentence = words.map(word => {
+        for(let suffix in cipher){
+            if(word.endsWith(suffix)){
+                let cb = cipher[suffix];
+                return cb(word);
+            }
+        }
+        return word;
+    });
+    return newSentence.join(" ");
 }
 
 
