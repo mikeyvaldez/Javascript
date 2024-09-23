@@ -15,8 +15,13 @@ In other words,
 function alternatingMap(arr, cb1, cb2){
     let newArr = [];
     for(let i = 0; i < arr.length; i++){
-        
+        if(i % 2 === 0){
+            newArr.push(cb1(arr[i]));
+        } else {
+            newArr.push(cb2(arr[i]));
+        }
     }
+    return newArr;
 }
 
 
