@@ -25,7 +25,16 @@ actually does the required work of summing.
 ***********************************************************************/
 
 let curriedSum = numArgs => {
-     
+     let numbers = [];
+     const _curriedSum = num => {
+      numbers.push(num);
+      if(numbers.length === numArgs){
+        return numbers.reduce((accum, currentVal) => accum + currentVal);
+      } else {
+        return _curriedSum;
+      }
+     }
+     return _curriedSum;
 }
 
 
