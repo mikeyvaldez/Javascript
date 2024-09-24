@@ -17,7 +17,7 @@ Here is a breakdown of how curriedSum(numArgs) should work:
         - If `numbers.length === numArgs`, it sums the numbers in the array and
         returns the result.
         - Else, it returns itself.
-    - Returns `_curriedSum`.
+    - Returns `_curriedSum`
 
 If you're confused, think of it this way: `_curriedSum` keeps collecting
 arguments and returning itself until it has enough arguments, at which point it
