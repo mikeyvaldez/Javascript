@@ -7,7 +7,7 @@ Write a function, `setSecondsTimeoutArgs`, that accepts a callback, a delay
 in seconds, and any number of additional arguments. The function should call the
 callback with the additional arguments after the specified delay.
 
-In addition to Mocha, we recommend that you test your code manually using node
+test your code manually using node
 with the examples below.
 ***********************************************************************/
 
