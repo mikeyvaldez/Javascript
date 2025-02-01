@@ -1,0 +1,15 @@
+
+
+
+// POWER
+
+// Write a function called power which accepts a base and an exponent. The function should return the
+// power of the base to the exponent. This function should mimic the functionality
+// of Math.pow()  - do not worry about negative bases and exponents.
+
+
+function power(pow, base){
+    if(base === 0) return 1;
+
+    return pow * power(pow, base - 1) // here we make a recursive call (multiply pow * pow and take away from the base)
+}
