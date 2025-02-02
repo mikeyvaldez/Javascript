@@ -8,8 +8,8 @@
 // of Math.pow()  - do not worry about negative bases and exponents.
 
 
-function power(pow, base){
-    if(base === 0) return 1;
+function power(base, exponent){
+    if(exponent === 0) return 1;
 
-    return pow * power(pow, base - 1) // here we make a recursive call (multiply pow * pow and take away from the base)
+    return base * power(base, exponent - 1) // here we make a recursive call (multiply pow * pow and take away from the base)
 }

@@ -6,12 +6,9 @@
 
 
 function recursiveRange(num){
-    let accum = 0;
-    
-    if(accum >= num) return 0;
-    
-    accum = num + recursiveRange(num - 1)
-    return accum
+    if(num === 0) return 0;
+
+    return num + recursiveRange(num - 1)
 }
 
 

@@ -7,7 +7,8 @@
 
 
 function factorial(num){
-    if(num === 0) return 1; // base case
+    if(num < 0) return 0; // base case
+    if(num <= 1) return 1;
 
     return num * factorial(num - 1); // recursive call
 }

@@ -6,15 +6,22 @@
 
 
 
-function productOfArray(arr, index = 0){
+// function productOfArray(arr, index = 0){
+//      //base case
+//     // once the length of the array is at 0, return the answer
+//     if(arr.length === index) return 1;
+    
+//     // recursive call
+//     return arr[index] * productOfArray(arr, index + 1);    
+// }
+
+function productOfArray(arr){
      //base case
     // once the length of the array is at 0, return the answer
-    if(arr.length === index) return 1;
+    if(arr.length === 0) return 1;
     
     // recursive call
-    return arr[index] * productOfArray(arr, index + 1);
-    
-    
+    return arr[0] * productOfArray(arr.slice(1));    
 }
 
 
