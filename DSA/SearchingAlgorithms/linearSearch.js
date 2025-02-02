@@ -3,6 +3,10 @@
 
 // LINEAR SEARCH
 
+// BIG-O
+// -- best case -> O(1)
+// -- avarage and worst case -> O(n)
+
 function linearSearch(arr, num){
     // iterate through the array
     for(let i = 0; i < arr.length; i++){
